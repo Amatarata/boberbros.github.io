@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Bober Bros – Horror Games</title>
+<title>Bober Bros</title>
 
 <style>
 /* ---------- Global ---------- */
@@ -16,51 +16,94 @@ h1{font-family:"TrashHand",sans-serif;letter-spacing:2px;font-size:3rem;margin:0
 .card{position:relative;cursor:pointer;overflow:hidden;border:3px solid #333;border-radius:12px;box-shadow:0 0 20px rgba(255,0,0,.3);transition:transform .3s;}
 .card:hover{transform:scale(1.04);}
 .card img{width:100%;display:block;}
-.card .title{position:absolute;bottom:0;left:0;right:0;padding:.6rem;background:rgba(0,0,0,.8);text-align:center;font-family:"TrashHand",sans-serif;font-size:1.1rem;}
 /* ---------- Social bar ---------- */
 #socials{display:flex;justify-content:center;gap:1.2rem;margin:4rem 0 2rem;}
 #socials a{width:32px;height:32px;display:inline-block;}
+#socials a.patreon{width:40px;height:40px;}   /* Patreon bigger */
 #socials img{width:100%;height:100%;filter:grayscale(.3) brightness(1.3);transition:filter .2s;}
 #socials a:hover img{filter:none;}
-/* ---------- Subtle glitch ---------- */
+/* ---------- Glitch ---------- */
 @keyframes glitch {0%{clip-path:inset(0 0 70% 0);}33%{clip-path:inset(20% 0 40% 0);}66%{clip-path:inset(60% 0 10% 0);}100%{clip-path:inset(0 0 70% 0);}}
 h1::after{content:attr(data-glitch);position:absolute;top:0;left:0;right:0;color:#f00;mix-blend-mode:hard-light;animation:glitch 2s infinite;}
 </style>
 </head>
 
 <body>
-<h1 data-glitch="Bober Bros">Bober Bros</h1>
+<h1 data-glitch="Bober Bros">Bober Bros</h1>
 
 <section id="gallery"></section>
 
 <footer id="socials">
-  <a href="https://patreon.com/boberbros"><img src="assets/icons/patreon.svg" alt="Patreon"></a>
-  <a href="https://discord.gg/boberbros"><img src="assets/icons/discord.svg"  alt="Discord"></a>
-  <a href="https://store.steampowered.com/developer/boberbros"><img src="assets/icons/steam.svg" alt="Steam"></a>
-  <a href="https://youtube.com/@boberbros"><img src="assets/icons/youtube.svg" alt="YouTube"></a>
-  <a href="https://twitter.com/boberbros"><img src="assets/icons/twitter.svg" alt="Twitter"></a>
-  <a href="https://tiktok.com/@boberbros"><img src="assets/icons/tiktok.svg" alt="TikTok"></a>
-  <a href="https://instagram.com/boberbros"><img src="assets/icons/instagram.svg" alt="Instagram"></a>
-  <a href="https://t.me/boberbros"><img src="assets/icons/telegram.svg" alt="Telegram"></a>
+  <a href="https://www.patreon.com/c/SuperBoberBros" class="patreon">
+    <img src="assets/icons/patreon.svg" alt="Patreon">
+  </a>
+  <a href="https://discord.com/invite/6rR3mXgq73">
+    <img src="assets/icons/discord.svg"  alt="Discord">
+  </a>
+  <a href="https://store.steampowered.com/developer/SUPERBOBERBROS">
+    <img src="assets/icons/steam.svg" alt="Steam">
+  </a>
+  <a href="https://www.youtube.com/@superboberbros">
+    <img src="assets/icons/youtube.svg" alt="YouTube">
+  </a>
+  <a href="https://x.com/SuperBoberBros">
+    <img src="assets/icons/twitter.svg" alt="Twitter">
+  </a>
+  <a href="https://www.tiktok.com/@bober.bros">
+    <img src="assets/icons/tiktok.svg" alt="TikTok">
+  </a>
+  <a href="https://www.instagram.com/superboberbros/">
+    <img src="assets/icons/instagram.svg" alt="Instagram">
+  </a>
+  <a href="https://bsky.app/profile/superboberbros.bsky.social">
+    <img src="assets/icons/bluesky.svg" alt="Bluesky">
+  </a>
+  <a href="https://www.reddit.com/r/BoberBros/">
+    <img src="assets/icons/reddit.svg" alt="Reddit">
+  </a>
+  <a href="https://t.me/superboberbros">
+    <img src="assets/icons/telegram.svg" alt="Telegram">
+  </a>
 </footer>
 
+
 <script>
-// ====== ONLY THING YOU EDIT TO ADD A GAME ======
+// ====== Single point of truth ======
 const games = [
-  {title:"It’s Just a Prank",  folder:"ItsJustAPrank"},
-  {title:"Old Man’s Liver",    folder:"OldMansLiver"},
-  {title:"The Hole",           folder:"TheHole"}
+  {
+    title: "It’s Just a Prank",
+    folder: "ItsJustAPrank",
+    url: "https://store.steampowered.com/app/3001730/Bober_Bros_Its_Just_A_Prank/"
+  },
+  {
+    title: "The Hole",
+    folder: "TheHole",
+    url: "https://store.steampowered.com/app/3037930/Bober_Bros_The_Hole/"
+  },
+  {
+    title: "Old Man’s Liver",
+    folder: "OldMansLiver",
+    url: "https://store.steampowered.com/app/3080380/Violent_Horror_Stories_anthology/"
+  },
+  {
+    title: "Happy House",
+    folder: "HappyHouse",
+    url: "https://store.steampowered.com/app/3196750/Bober_Bros_Happy_House/"
+  },
+  {
+    title: "No Means Nothing",
+    folder: "NoMeansNothing",
+    url: "https://store.steampowered.com/app/3706160/Bober_Bros_No_Means_Nothing/"
+  }
 ];
-// ===============================================
+// ===================================
 
 const gallery = document.getElementById("gallery");
 games.forEach(g=>{
   const card = document.createElement("a");
-  card.className="card";
-  card.href=`games/${g.folder}/index.html`;
-  card.innerHTML = `
-    <img src="games/${g.folder}/cover.jpg" alt="${g.title}">
-    <span class="title">${g.title}</span>`;
+  card.className = "card";
+  card.href      = g.url;                                   // use Steam URL
+  card.innerHTML = `<img src="games/${g.folder}/cover.jpg" alt="${g.title}">`;
   gallery.appendChild(card);
 });
 </script>
