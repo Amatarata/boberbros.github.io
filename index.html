@@ -104,6 +104,11 @@ const games = [
     url: "https://store.steampowered.com/app/3196750/Bober_Bros_Happy_House/"
   },
   {
+    title: "Hi, What's Your Emergency?",
+    folder: "HiWhatsYourEmergency",
+    url: "https://store.steampowered.com/app/3636960/Violent_Horror_Stories_2/"
+  },
+  {
     title: "No Means Nothing",
     folder: "NoMeansNothing",
     url: "https://store.steampowered.com/app/3706160/Bober_Bros_No_Means_Nothing/"
@@ -115,8 +120,9 @@ const gallery = document.getElementById("gallery");
 games.forEach(g=>{
   const card = document.createElement("a");
   card.className = "card";
-  card.href      = g.url;                                   // use Steam URL
-  card.innerHTML = `<img src="games/${g.folder}/cover.jpg" alt="${g.title}">`;
+  card.href      = g.url || "#";                            // use Steam URL
+  const cover    = g.cover || "cover.jpg";
+  card.innerHTML = `<img src="games/${g.folder}/${cover}" alt="${g.title}">`;
   gallery.appendChild(card);
 });
 </script>
