@@ -1,41 +1,48 @@
 {
-    "games":
-    [
-        {
-            "title": "It's Just a Prank",
-            "image": "https://boberbros.com/games/ItsJustAPrank/cover.jpg",
-            "url": "https://store.steampowered.com/app/3001730/Bober_Bros_Its_Just_A_Prank/"
-        },
-
-        {
-            "title": "The Hole",
-            "image": "https://boberbros.com/games/TheHole/cover.jpg",
-            "url": "https://store.steampowered.com/app/3037930/Bober_Bros_The_Hole/"
-        },
-        
-        {
-            "title": "Old Man’s Liver",
-            "image": "https://boberbros.com/games/OldMansLiver/cover.jpg",
-            "url": "https://store.steampowered.com/app/3080380/Violent_Horror_Stories_anthology/"
-        },
-
-        {
-            "title": "Happy House",
-            "image": "https://boberbros.com/games/HappyHouse/cover.jpg",
-            "url": "https://store.steampowered.com/app/3196750/Bober_Bros_Happy_House/"
-        },
-
-        {
-            "title": "Hi, What's Your Emergency?",
-            "image": "https://boberbros.com/games/HiWhatsYourEmergency/cover.jpg",
-            "url": "https://store.steampowered.com/app/3636960/Violent_Horror_Stories_2/"
-        },
-
-        {
-            "title": "No Means Nothing",
-            "image": "https://boberbros.com/games/NoMeansNothing/cover.jpg",
-            "url": "https://store.steampowered.com/app/3706160/Bober_Bros_No_Means_Nothing/"
-        }
-
-    ]
+  "games": [
+    {
+      "title": "Last Pill Bar",
+      "folder": "LastPillBar",
+      "cover": "cover.webp",
+      "status": "Coming soon",
+      "url": "https://store.steampowered.com/app/4603670/Bober_Bros_Last_Pill_Bar/"
+    },
+    {
+      "title": "Happy House",
+      "folder": "HappyHouse",
+      "cover": "cover.webp",
+      "status": "Coming soon",
+      "url": "https://store.steampowered.com/app/3196750/Bober_Bros_Happy_House/"
+    },
+    {
+      "title": "It's Just a Prank",
+      "folder": "ItsJustAPrank",
+      "cover": "cover.webp",
+      "url": "https://store.steampowered.com/app/3001730/Bober_Bros_Its_Just_A_Prank/"
+    },
+    {
+      "title": "The Hole",
+      "folder": "TheHole",
+      "cover": "cover.webp",
+      "url": "https://store.steampowered.com/app/3037930/Bober_Bros_The_Hole/"
+    },
+    {
+      "title": "Old Man's Liver",
+      "folder": "OldMansLiver",
+      "cover": "cover.webp",
+      "url": "https://store.steampowered.com/app/3080380/Violent_Horror_Stories_anthology/"
+    },
+    {
+      "title": "Hi, What's Your Emergency?",
+      "folder": "HiWhatsYourEmergency",
+      "cover": "cover.webp",
+      "url": "https://store.steampowered.com/app/3636960/Violent_Horror_Stories_2/"
+    },
+    {
+      "title": "No Means Nothing",
+      "folder": "NoMeansNothing",
+      "cover": "cover.webp",
+      "url": "https://store.steampowered.com/app/3706160/Bober_Bros_No_Means_Nothing/"
+    }
+  ]
 }
